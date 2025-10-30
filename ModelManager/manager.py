@@ -14,4 +14,4 @@ def process_data(data: pd.DataFrame):
 
 def train_model(dataset: pd.DataFrame):
     m = model.train(dataset, predictor="has_fever")
-    model.save_model(m)
+    model.build_artifact(m, "model.onnx")
